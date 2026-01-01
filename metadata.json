@@ -1,0 +1,8 @@
+{
+  "name": "AI Catalyst: Business Transformation",
+  "description": "High-converting landing page for an AI consultancy, featuring an interactive AI-powered strategy assistant to demonstrate the value of automation and intelligent systems for modern businesses.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
