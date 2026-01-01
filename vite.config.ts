@@ -10,6 +10,8 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
+      //base: '/aiCatalystLanding/', // Добавьте эту строку с именем вашего репозитория
+      base: '/AI-landing2/', // Добавьте эту строку с именем вашего репозитория
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
