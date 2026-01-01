@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # или master, проверьте имя вашей ветки
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          //cache: 'npm'
+          # Мы убрали параметр cache, чтобы GitHub не искал package-lock.json
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -29,7 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Vite по умолчанию собирает сайт в папку dist
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
